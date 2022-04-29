@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { BrowserRouter , Routes , Route } from 'react-router-dom';
 // import logo from './logo.svg';
 // import './App.css';
 // import Header from './component/Header';
@@ -17,10 +18,15 @@ function App() {
     //   </div>
     // </div>
 
-    <div>
-      <Header />
-      <Main />
-      <Footer />
+    <div className='App'>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Main />}></Route>
+          <Route path='/product/*' element={<Main />}></Route>
+          <Route path='*' element={<Footer />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
