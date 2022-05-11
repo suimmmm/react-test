@@ -1,12 +1,8 @@
 import React from 'react';
-import { BrowserRouter , Routes , Route } from 'react-router-dom';
+// import { BrowserRouter , Routes , Route } from 'react-router-dom';
 // import logo from './logo.svg';
 // import './App.css';
-// import Header from './component/Header';
-import Header from './component/Header';
-import Footer from './component/Footer';
-import Main from './component/Main';
-
+import Content from './toDoA/Content';
 
 function App() {
   return (
@@ -19,14 +15,7 @@ function App() {
     // </div>
 
     <div className='App'>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path='/' element={<Main />}></Route>
-          <Route path='/product/*' element={<Main />}></Route>
-          <Route path='*' element={<Footer />}></Route>
-        </Routes>
-      </BrowserRouter>
+      <Content />
     </div>
   );
 }
